@@ -11,7 +11,7 @@
 const fs = require('fs')
 const os = require('os')
 const path = require('path')
-const colors = require('picocolors')
+// const colors = require('picocolors')
 const childProcess = require('child_process')
 
 const guessEditor = require('./guess')
@@ -19,19 +19,20 @@ const getArgumentsForPosition = require('./get-args')
 
 function wrapErrorCallback (cb) {
   return (fileName, errorMessage) => {
-    console.log()
-    console.log(
-      colors.red('Could not open ' + path.basename(fileName) + ' in the editor.')
-    )
-    if (errorMessage) {
-      if (errorMessage[errorMessage.length - 1] !== '.') {
-        errorMessage += '.'
-      }
-      console.log(
-        colors.red('The editor process exited with an error: ' + errorMessage)
-      )
-    }
-    console.log()
+    // PATCH[skidding]: Allow clients to handle errors
+    // console.log()
+    // console.log(
+    //   colors.red('Could not open ' + path.basename(fileName) + ' in the editor.')
+    // )
+    // if (errorMessage) {
+    //   if (errorMessage[errorMessage.length - 1] !== '.') {
+    //     errorMessage += '.'
+    //   }
+    //   console.log(
+    //     colors.red('The editor process exited with an error: ' + errorMessage)
+    //   )
+    // }
+    // console.log()
     if (cb) cb(fileName, errorMessage)
   }
 }
@@ -155,7 +156,7 @@ function launchEditor (file, specifiedEditor, onErrorCallback) {
         return `^"${str}^"`
       } else if (str.includes(' ')) {
         return `"${str}"`
-      } 
+      }
       return str
     }
     const launchCommand = [editor, ...args.map(escapeCmdArgs)]

@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/yyx990803/launch-editor#readme",
   "dependencies": {
-    "launch-editor": "workspace:^"
+    "@skidding/launch-editor": "workspace:^"
   }
 }

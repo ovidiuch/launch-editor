@@ -29,16 +29,13 @@ importers:
 
   packages/launch-editor:
     dependencies:
-      picocolors:
-        specifier: ^1.1.1
-        version: 1.1.1
       shell-quote:
         specifier: ^1.8.3
         version: 1.8.3
 
   packages/launch-editor-middleware:
     dependencies:
-      launch-editor:
+      '@skidding/launch-editor':
         specifier: workspace:^
         version: link:../launch-editor
 
@@ -670,9 +667,6 @@ packages:
   path-key@3.1.1:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
     engines: {node: '>=8'}
-
-  picocolors@1.1.1:
-    resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
   picomatch@4.0.3:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
@@ -1479,8 +1473,6 @@ snapshots:
   path-key@2.0.1: {}
 
   path-key@3.1.1: {}
-
-  picocolors@1.1.1: {}
 
   picomatch@4.0.3: {}
 
