@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/yyx990803/launch-editor#readme",
   "dependencies": {
-    "picocolors": "^1.1.1",
     "shell-quote": "^1.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

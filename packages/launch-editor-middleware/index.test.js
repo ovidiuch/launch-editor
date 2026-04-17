@@ -3,7 +3,7 @@ const { describe, test, mock } = require('node:test')
 
 const noop = () => {}
 
-mock.module('launch-editor', {
+mock.module('@skidding/launch-editor', {
   defaultExport: noop,
 })
 const launchEditorMiddleware = require('./index.js')
