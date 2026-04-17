@@ -1,6 +1,6 @@
 {
   "name": "@skidding/launch-editor",
-  "version": "2.2.3",
+  "version": "2.13.2",
   "description": "launch editor from node.js",
   "main": "index.js",
   "repository": {
@@ -18,10 +18,7 @@
   },
   "homepage": "https://github.com/yyx990803/launch-editor#readme",
   "dependencies": {
-    "chalk": "^2.3.0",
-    "shell-quote": "^1.6.1"
-  },
-  "publishConfig": {
-    "access": "public"
+    "picocolors": "^1.1.1",
+    "shell-quote": "^1.8.3"
   }
 }

@@ -1,8 +1,14 @@
 {
   "name": "launch-editor-middleware",
-  "version": "2.2.1",
+  "version": "2.13.2",
   "description": "express middleware for launching editor",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "node --test --experimental-test-module-mocks"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yyx990803/launch-editor.git"
@@ -19,6 +25,6 @@
   },
   "homepage": "https://github.com/yyx990803/launch-editor#readme",
   "dependencies": {
-    "launch-editor": "^2.2.1"
+    "launch-editor": "workspace:^"
   }
 }
